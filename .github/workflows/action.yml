@@ -11,8 +11,6 @@ jobs:
     steps:
       - name: 'Checkout codes'
         uses: actions/checkout@v1
-      - name: 'Get current path'
-        run: pwd
       - name: 'Get Weather'
         run: bash ./wearher.sh
       - name: 'Get Date'
