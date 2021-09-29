@@ -11,8 +11,10 @@ jobs:
     steps:
       - name: 'Checkout codes'
         uses: actions/checkout@v1
+      - name: 'Get current path'
+        run: pwd
       - name: 'Get Weather'
-        run: bash ../../wearher.sh
+        run: bash ./wearher.sh
       - name: 'Get Date'
         run: echo "REPORT_DATE=$(TZ=':Asia/YinChuan' date '+%Y-%m-%d %T')" >> $GITHUB_ENV
       - name: 'Send Email'
