@@ -15,7 +15,7 @@ jobs:
         run: bash ./weather.sh
       - name: 'Get Date'
         run echo "REPORT_DATE=$(TZ=':Asia/YinChuan' date '+%Y-%m-%d %T')" >> $GITHUB_ENV
-      - name: 'Send Email'
+      - name: 'Send mail'
         uses: dawidd6/acion-send-mail@master
         with:
           server_address: smtp.163.com
